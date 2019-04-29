@@ -60,6 +60,43 @@
         animation: orbit-2 1s infinite linear;
     }
 
+.spinner-3 {
+    position: relative;
+    margin: 16px 32px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background-color: yellowgreen;
+    animation: bounce 1s infinite ease-in-out;
+    animation-delay: 1.4s;
+}
+
+    .spinner-3::before,
+    .spinner-3::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+    }
+
+    .spinner-3::before {
+        background-color: green;
+        left: -24px;
+        animation: bounce 1s infinite ease-in-out;
+    }
+
+    .spinner-3::after {
+        background-color: blue;
+        left: 24px;
+        animation: bounce 1s infinite ease-in-out;
+        animation-delay: 2.2s;
+    }
+
 @keyframes rotator {
     0% {
         transform: rotate(-180deg);
@@ -102,5 +139,20 @@
     }
     100% {
         transform: translateX(120%) rotate(-180deg);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: -16px;
+    }
+    50% {
+        top: 0;
+    }
+    100% {
+        top: 0;
     }
 }
