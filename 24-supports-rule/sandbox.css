@@ -3,7 +3,16 @@
     CODE YOUR STYLES BELOW!
 
    ====================================== */
-@supports (border-radius: 100%) {
+.circle {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+   @supports (border-radius: 100%) {
     .circle {
         border-radius: 100%;
     }
